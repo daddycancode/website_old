@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div>
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+    {% endwith %}
+    <form id="upload-form" action="" method="POST" enctype="multipart/form-data">
+        <h1><span class="text">Upload:</span></h1>
+        <p><input id="file-picker" type="file" name="file" multiple /></p>
+        <h1><span class="text">Password:</span></h1>
+        <p><input type="text" name="password" placeholder="Password"/></p>
+        <p><input type="submit" class="button" value="Upload!" id="upload-button" /></p>
+        <br>
+        <p>Click <a href="{{ url_for('files.home') }}">here</a> to view all files.</p>
+    </form>
+</body>
+</html>

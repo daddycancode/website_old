@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+  background-color: #121212;
+  color: #eee;
+}
+
+.wheel {
+    border: 20px solid transparent;
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.center-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250%;
+    font-family: "Chalkduster", fantasy;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.body-center {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.form-signin {
+  width: 100%;
+  width: 325px;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.error a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+.error a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+.error a:hover {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
